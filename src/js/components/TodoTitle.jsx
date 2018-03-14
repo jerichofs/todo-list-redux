@@ -1,14 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default class TodoTitle extends React.Component {
+class TodoTitle extends React.Component {
 
     render() {
         return (
             <input
                 type="text"
                 placeholder="Title"
-                onChange={this.props.checkTitleForm}
+                ref={this.props.getTitleField}
             />
         );
     }
 }
+
+TodoTitle.propTypes = {
+    getTitleField: PropTypes.func.isRequired
+}
+
+export default TodoTitle;

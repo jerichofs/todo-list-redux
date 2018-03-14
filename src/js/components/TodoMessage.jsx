@@ -1,14 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default class TodoMessage extends React.Component {
+class TodoMessage extends React.Component {
 
     render() {
         return (
             <input
                 type="text"
                 placeholder="Your message"
-                onChange={this.props.checkMessageForm}
+                ref={this.props.getMessageField}
             />
         );
     }
 }
+
+TodoMessage.propTypes = {
+    getMessageField: PropTypes.func.isRequired
+}
+
+export default TodoMessage;
