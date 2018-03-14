@@ -7,6 +7,8 @@ import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 
 import TodoApp from './components/TodoApp';
+import mainTodoReducer from './reducers/index';
+
 import "../css/TodoApp.css";
 
 /**
@@ -17,21 +19,25 @@ import "../css/TodoApp.css";
 const render = component => {
     ReactDOM.render(
         <AppContainer>
-        <component />
+            <component />
         </AppContainer>,
         document.getElementById('root')
     )
 };
 
+// create the store for the app
+let store = createStore(mainTodoReducer);
+
 ReactDOM.render(
-    <AppContainer>
-    <TodoApp />
-    </AppContainer>,
+    <Provider store={store}>
+        <AppContainer>
+            <TodoApp />
+        </AppContainer>
+    </Provider>,
     document.getElementById('root')
 );
 
 if (module.hot) {
-    module.hot.accept('./components/TodoApp', () => 
-        superRender(require('./components/TodoApp').default));
-
+    module.hot.accept(TodoApp, () => 
+        require('./components/TodoApp').default);
 }
