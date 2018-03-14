@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class TodoMessage extends React.Component {
+class TodoMessageComponent extends React.Component {
 
     render() {
         return (
@@ -14,8 +14,8 @@ class TodoMessage extends React.Component {
     }
 }
 
-TodoMessage.propTypes = {
+TodoMessageComponent.propTypes = {
     getMessageField: PropTypes.func.isRequired
 }
 
-export default TodoMessage;
+export default TodoMessageComponent;

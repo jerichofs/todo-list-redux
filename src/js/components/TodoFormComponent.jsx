@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import TodoTitleComponent from './TodoTitleComponent';
-import TodoMessage from './TodoMessage';
+import TodoMessageComponent from './TodoMessageComponent';
 import TodoAddComponent from './TodoAddComponent';
 
 
@@ -17,7 +17,7 @@ class TodoFormComponent extends React.Component {
                     </div>
 
                     <div className="Todo-Message">
-                        <TodoMessage getMessageField={this.props.getMessageByRef} />
+                        <TodoMessageComponent getMessageField={this.props.getMessageByRef} />
                     </div>
 
                     <div className="Todo-Add">
