@@ -4,7 +4,7 @@ export default class TodoAdd extends React.Component {
 
     render() {
         return (
-            <button onSubmit={this.props.checkInputsForm}>Add</button>
+            <button type="submit">Add</button>
         );
     }
 }
