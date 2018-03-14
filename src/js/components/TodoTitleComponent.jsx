@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class TodoTitle extends React.Component {
+class TodoTitleComponent extends React.Component {
 
     render() {
         return (
@@ -14,8 +14,8 @@ class TodoTitle extends React.Component {
     }
 }
 
-TodoTitle.propTypes = {
+TodoTitleComponent.propTypes = {
     getTitleField: PropTypes.func.isRequired
 }
 
-export default TodoTitle;
+export default TodoTitleComponent;

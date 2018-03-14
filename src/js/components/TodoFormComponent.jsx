@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import TodoTitle from './TodoTitle';
+import TodoTitleComponent from './TodoTitleComponent';
 import TodoMessage from './TodoMessage';
 import TodoAddComponent from './TodoAddComponent';
 
@@ -13,7 +13,7 @@ class TodoFormComponent extends React.Component {
             <div className="Todo-Form">
                 <form onSubmit={this.props.onAddClick}>
                     <div className="Todo-Title">
-                        <TodoTitle getTitleField={this.props.getTitleByRef} />
+                        <TodoTitleComponent getTitleField={this.props.getTitleByRef} />
                     </div>
 
                     <div className="Todo-Message">
