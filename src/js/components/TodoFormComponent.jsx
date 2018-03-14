@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import TodoTitle from './TodoTitle';
 import TodoMessage from './TodoMessage';
-import TodoAdd from './TodoAdd';
+import TodoAddComponent from './TodoAddComponent';
 
 
 class TodoFormComponent extends React.Component {
@@ -21,7 +21,7 @@ class TodoFormComponent extends React.Component {
                     </div>
 
                     <div className="Todo-Add">
-                        <TodoAdd />
+                        <TodoAddComponent />
                     </div>
                 </form>
                 

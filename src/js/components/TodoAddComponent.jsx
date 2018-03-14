@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class TodoAdd extends React.Component {
+export default class TodoAddComponent extends React.Component {
 
     render() {
         return (
