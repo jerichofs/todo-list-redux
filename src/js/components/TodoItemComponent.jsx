@@ -1,7 +1,6 @@
 import React from 'react';
-import TodoTitle from './TodoTitle';
 
-export default class TodoItem extends React.Component {
+class TodoItemComponent extends React.Component {
 
     HandleRemove = () => {
         const{item, removeItem} = this.props;
@@ -68,10 +67,4 @@ export default class TodoItem extends React.Component {
     }
 }
 
-/**
- *  <p>{this.props.itemTitle}</p>
-                <p>{this.props.itemMessage}</p>
-                <p>{this.props.dateItem}</p>
-                <button onClick={this.HandleRemove}>remove</button>
-                <button onClick={this.props.clickEdit}>Edit</button>
- */
+export default TodoItemComponent;
