@@ -1,30 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class TodoItemComponent extends React.Component {
 
-    HandleRemove = () => {
-        const{item, removeItem} = this.props;
-        removeItem(item.id);
-    }
-
-    HandleEdit = () => {
-        const{item, editItem} = this.props;
-        editItem(item.id);
-    }
-
-    HandleSave = () => {
-        const{item, saveEdit} = this.props;
-        saveEdit(item.id);
-    }
-
-    HandleCancel = () => {
-        const{item, cancelEdit} = this.props;
-        cancelEdit(item.id);
-    }
-
-// this.props.item.isTriggeredEdit
-
     render() {
+
+        // just name variables
+        let id = this.props.item.id;
+        let title = this.props.item.title;
+        let message = this.props.item.message;
+        let date = this.props.item.date;
+        let isTriggeredEdit = this.props.item.isTriggeredEdit;
 
         // this condition will carry out only if we pressed the edit button once
         if (this.props.item.isTriggeredEdit) {
@@ -35,17 +21,17 @@ class TodoItemComponent extends React.Component {
                         className="Edit-Title-Message"
                         type="text"
                         defaultValue={this.props.item.title}
-                        onChange={this.props.editTitle}
+                        ref={this.props.getTitleItemFiled}
                     />
                     <input
                         className="Edit-Title-Message"
                         type="text"
                         defaultValue={this.props.item.message}
-                        onChange={this.props.editMessage}
+                        ref={this.props.getMessageItemField}
                     />
 
-                    <button className="Save-Button" onClick={this.HandleSave}>save</button>
-                    <button className="Cancel-Button" onClick={this.HandleCancel}>cancel</button>
+                    <button className="Save-Button" onClick={this.props.onSaveField}>save</button>
+                    <button className="Cancel-Button" onClick={this.props.onCancelField}>cancel</button>
                 </li>
             );
         }
@@ -58,13 +44,29 @@ class TodoItemComponent extends React.Component {
                         <p className="Item-Date">{this.props.item.date}</p>
                     </div>
                     
-                    <button className="Remove-Button" onClick={this.HandleRemove}>remove</button>
-                    <button className="Edit-Button" onClick={this.HandleEdit}>edit</button>
+                    <button className="Remove-Button"  onClick={this.props.onRemoveField}>remove</button>
+                    <button className="Edit-Button" onClick={this.props.onEditField}>edit</button>
                     
                 </li>
             );
         }
     }
+}
+
+TodoItemComponent.propTypes = {
+    item: PropTypes.shape({
+        id: PropTypes.number,
+        title: PropTypes.string,
+        message: PropTypes.string,
+        date: PropTypes.string,
+        isTriggeredEdit: PropTypes.bool
+    }),
+    getTitleItemFiled: PropTypes.func.isRequired,
+    getMessageItemField: PropTypes.func.isRequired,
+    onSaveField: PropTypes.func.isRequired,
+    onCancelField: PropTypes.func.isRequired,
+    onRemoveField: PropTypes.func.isRequired,
+    onEditField: PropTypes.func.isRequired
 }
 
 export default TodoItemComponent;
