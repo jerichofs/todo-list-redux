@@ -10,6 +10,10 @@ const items = (state = [], action) => {
                     isTriggeredEdit: false
                 }
             ]
+
+        case 'REMOVE_ITEM':
+            return state.filter(item => item.id !== action.id)
+
         case 'TOGGLE_ITEM':
             return state.map(item => {
                 // if we found a desired element,

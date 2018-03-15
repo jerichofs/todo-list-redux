@@ -13,6 +13,14 @@ export const addTodo = (message, title) => {
     }
 }
 
+// action for removing an item
+export const removeItem = (id) => {
+    return {
+        type: 'REMOVE_ITEM',
+        id
+    }
+}
+
 // action for toggling an item
 export const toggleItem = (id) => {
     return {
