@@ -3,7 +3,7 @@ let TodoId = 0;
 // ugly date, needed a serious reimplementation due to is ugliness
 let dateAdded = new Date();
 let uglyDate = dateAdded.getDate() + '-' + (dateAdded.getMonth()+1) + '-' + dateAdded.getFullYear() + ' ' + dateAdded.getHours() + ':' + dateAdded.getMinutes();
-export const addTodo = (message, title) => {
+export const addTodo = (title, message) => {
     return {
         type: 'ADD_ITEM',
         id: TodoId++,

@@ -1,17 +1,17 @@
 import React from 'react';
 
-import TodoFormContainer from '../containers/TodoFormContainer';
-import TodoListContainer from '../containers/TodoListContainer';
+import TodoForm from '../containers/TodoFormContainer';
+import TodoList from '../containers/TodoListContainer';
 
 class TodoApp extends React.Component {
 
     render() {
         return (
             <div className="Todo-App">
-                <TodoFormContainer />
+                <TodoForm />
 
                 <div className="Todo-List">
-                    <TodoListContainer />
+                    <TodoList />
                 </div>
             </div>
         );
