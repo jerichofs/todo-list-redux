@@ -35,7 +35,8 @@ const items = (state = [], action) => {
                     return {
                         ...item,
                         title: action.title,
-                        message: action.message
+                        message: action.message,
+                        isTriggeredEdit: !item.isTriggeredEdit
                     }
                 }
                 else {
