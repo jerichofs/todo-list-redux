@@ -21,7 +21,7 @@ class TodoItemComponent extends React.Component {
                         className="Edit-Title-Message"
                         type="text"
                         defaultValue={this.props.item.title}
-                        ref={this.props.getTitleItemFiled}
+                        ref={this.props.getTitleItemField}
                     />
                     <input
                         className="Edit-Title-Message"
@@ -61,7 +61,7 @@ TodoItemComponent.propTypes = {
         date: PropTypes.string,
         isTriggeredEdit: PropTypes.bool
     }),
-    getTitleItemFiled: PropTypes.func.isRequired,
+    getTitleItemField: PropTypes.func.isRequired,
     getMessageItemField: PropTypes.func.isRequired,
     onSaveField: PropTypes.func.isRequired,
     onCancelField: PropTypes.func.isRequired,

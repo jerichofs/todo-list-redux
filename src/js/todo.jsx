@@ -6,7 +6,7 @@ import {AppContainer} from 'react-hot-loader';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 
-import TodoApp from './components/TodoApp';
+import TodoApp from './components/TodoAppComponent';
 import mainTodoReducer from './reducers/index';
 
 import "../css/TodoApp.css";
@@ -39,5 +39,5 @@ ReactDOM.render(
 
 if (module.hot) {
     module.hot.accept(TodoApp, () => 
-        require('./components/TodoApp').default);
+        require('./components/TodoAppComponent').default);
 }

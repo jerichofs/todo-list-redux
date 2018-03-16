@@ -13,8 +13,8 @@ class TodoListComponent extends React.Component {
                     <TodoItemComponent
                         item={item}
                         key={item.id}
-                        getTitleItemFiled={this.props.getTitleFieldByRef}
-                        getMessageItemField={this.props.getMessageFiledByRef}
+                        getTitleItemField={this.props.getTitleFieldByRef}
+                        getMessageItemField={this.props.getMessageFieldByRef}
                         onSaveField={() => this.props.onSaveClick(item.id)}
                         onCancelField={() => this.props.onCancelClick(item.id)}
                         onRemoveField={() => this.props.onRemoveClick(item.id)}
@@ -40,7 +40,7 @@ TodoListComponent.propTypes = {
         })
     ),
     getTitleFieldByRef: PropTypes.func.isRequired,
-    getMessageFiledByRef: PropTypes.func.isRequired,
+    getMessageFieldByRef: PropTypes.func.isRequired,
     onSaveClick: PropTypes.func.isRequired,
     onCancelClick: PropTypes.func.isRequired,
     onRemoveClick: PropTypes.func.isRequired,
