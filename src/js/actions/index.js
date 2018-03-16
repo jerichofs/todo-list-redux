@@ -32,6 +32,7 @@ export const toggleItem = (id) => {
 // action for saving an edited item
 export const editItemSave = (id, title, message) => {
     return {
+        type: 'EDIT_ITEM_SAVE',
         id,
         title,
         message
