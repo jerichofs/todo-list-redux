@@ -1,6 +1,7 @@
 ## Description
 This is a simple example of a classic application Todo List, which is based on React.js + Redux + Webpack + Babel.
 The app is also using React Hot Loader for convenient development and illustrating it's purpose.
+![Todo](https://i.imgur.com/oT5kFXA.png)
 ## Installation and Run
 The first step involves installing required libraries.
 * Run the following command:
