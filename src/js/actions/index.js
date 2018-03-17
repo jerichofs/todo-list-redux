@@ -1,15 +1,38 @@
 // action for adding a todo item
 let TodoId = 0;
-// ugly date, needed a serious reimplementation due to is ugliness
-let dateAdded = new Date();
-let uglyDate = dateAdded.getDate() + '-' + (dateAdded.getMonth()+1) + '-' + dateAdded.getFullYear() + ' ' + dateAdded.getHours() + ':' + dateAdded.getMinutes();
+
+// format date for an item
+let dateItemCreatedFormat = () => {
+
+    let dateAddedItem = new Date();
+
+    // date
+    let date = dateAddedItem.getDate() > 9 ? dateAddedItem.getDate() : '0' + dateAddedItem.getDate();
+    let month = dateAddedItem.getMonth() > 9 ? dateAddedItem.getMonth() + 1 : '0' + (dateAddedItem.getMonth() + 1);
+    let year = dateAddedItem.getFullYear();
+
+    // time
+    let hours = dateAddedItem.getHours();
+    let minutes = dateAddedItem.getMinutes() > 9 ? dateAddedItem.getMinutes() : '0' + dateAddedItem.getMinutes();
+
+    // we split the date of a created item into two parts: date and time for convenience
+
+    // date
+    let dateFormat = date + '-' + month + '-' + year + ' ';
+    
+    // time
+    let timeFormat = hours + ':' + minutes;
+
+    return dateFormat + timeFormat;
+}
+
 export const addTodo = (title, message) => {
     return {
         type: 'ADD_ITEM',
         id: TodoId++,
         title,
         message,
-        date: uglyDate
+        date: dateItemCreatedFormat()
     }
 }
 

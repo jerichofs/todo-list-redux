@@ -7,7 +7,8 @@ const items = (state = [], action) => {
                     id: action.id,
                     title: action.title,
                     message: action.message,
-                    isTriggeredEdit: false
+                    isTriggeredEdit: false,
+                    date: action.date
                 }
             ]
 
