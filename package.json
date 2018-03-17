@@ -1,7 +1,7 @@
 {
-  "name": "todo_otes",
+  "name": "todo-notes-redux",
   "version": "1.0.0",
-  "description": "Simple Todo Project",
+  "description": "Simple Todo list with using redux and react hot reloading",
   "main": "todo.jsx",
   "author": "jerichofs",
   "license": "MIT",
