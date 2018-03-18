@@ -10,9 +10,7 @@ class TodoApp extends React.Component {
             <div className="Todo-App">
                 <TodoForm />
 
-                <div className="Todo-List">
-                    <TodoList />
-                </div>
+                <TodoList />
             </div>
         );
     }
