@@ -35,8 +35,6 @@ body {
 .Todo-App .Todo-List {
     display: flex;
     flex-direction: column;
-    list-style: none;
-    width: 300px;
 }
 
 .Todo-App .Todo-List .Item {
@@ -45,7 +43,7 @@ body {
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 5px;
-   
+    width: fit-content;
     transition: background-color .2s ease-out;
 }
 
