@@ -34,7 +34,7 @@ body {
 
 .Todo-App .Todo-List {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
 }
 
 .Todo-App .Todo-List .Item {
