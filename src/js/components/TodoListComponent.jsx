@@ -13,12 +13,12 @@ class TodoListComponent extends React.Component {
                     <TodoItemComponent
                         item={item}
                         key={item.id}
-                        getTitleItemField={this.props.getTitleFieldByRef}
-                        getMessageItemField={this.props.getMessageFieldByRef}
-                        onSaveField={() => this.props.onSaveClick(item.id)}
-                        onCancelField={() => this.props.onCancelClick(item.id)}
-                        onRemoveField={() => this.props.onRemoveClick(item.id)}
-                        onEditField={() => this.props.onEditClick(item.id)}
+                        getTitleFieldByRef={this.props.getTitleFieldByRef}
+                        getMessageFieldByRef={this.props.getMessageFieldByRef}
+                        onSaveClick={() => this.props.onSaveClick(item.id)}
+                        onCancelClick={() => this.props.onCancelClick(item.id)}
+                        onRemoveClick={() => this.props.onRemoveClick(item.id)}
+                        onEditClick={() => this.props.onEditClick(item.id)}
                     />
                 );
             });

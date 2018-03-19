@@ -21,17 +21,18 @@ class TodoItemComponent extends React.Component {
                         className="Edit-Title-Message"
                         type="text"
                         defaultValue={this.props.item.title}
-                        ref={this.props.getTitleItemField}
+                        ref={this.props.getTitleFieldByRef}
                     />
+                    <br/>
                     <input
                         className="Edit-Title-Message"
                         type="text"
                         defaultValue={this.props.item.message}
-                        ref={this.props.getMessageItemField}
+                        ref={this.props.getMessageFieldByRef}
                     />
-
-                    <button className="Save-Button" onClick={this.props.onSaveField}>save</button>
-                    <button className="Cancel-Button" onClick={this.props.onCancelField}>cancel</button>
+                    <br/>
+                    <button className="Save-Button" onClick={this.props.onSaveClick}>save</button>
+                    <button className="Cancel-Button" onClick={this.props.onCancelClick}>cancel</button>
                 </li>
             );
         }
@@ -44,8 +45,8 @@ class TodoItemComponent extends React.Component {
                         <p className="Item-Date">{this.props.item.date}</p>
                     </div>
                     
-                    <button className="Remove-Button"  onClick={this.props.onRemoveField}>remove</button>
-                    <button className="Edit-Button" onClick={this.props.onEditField}>edit</button>
+                    <button className="Remove-Button"  onClick={this.props.onRemoveClick}>remove</button>
+                    <button className="Edit-Button" onClick={this.props.onEditClick}>edit</button>
                     
                 </li>
             );
@@ -61,12 +62,12 @@ TodoItemComponent.propTypes = {
         date: PropTypes.string,
         isTriggeredEdit: PropTypes.bool
     }),
-    getTitleItemField: PropTypes.func.isRequired,
-    getMessageItemField: PropTypes.func.isRequired,
-    onSaveField: PropTypes.func.isRequired,
-    onCancelField: PropTypes.func.isRequired,
-    onRemoveField: PropTypes.func.isRequired,
-    onEditField: PropTypes.func.isRequired
+    getTitleFieldByRef: PropTypes.func.isRequired,
+    getMessageFieldByRef: PropTypes.func.isRequired,
+    onSaveClick: PropTypes.func.isRequired,
+    onCancelClick: PropTypes.func.isRequired,
+    onRemoveClick: PropTypes.func.isRequired,
+    onEditClick: PropTypes.func.isRequired
 }
 
 export default TodoItemComponent;
